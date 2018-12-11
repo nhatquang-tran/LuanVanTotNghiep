@@ -1,0 +1,181 @@
+% This is a copy version from https://github.com/thanhhungqb/thesis-template
+% * <thanhhungqb@gmail.com> 2017-05-09T23:23:15.758Z:
+%
+% ^.
+% Please do not modified this project, when you want to start writing, make a clone of it for your own (Please read README.md)
+
+\documentclass[12pt,a4paper,oneside]{book} % twoside for draf
+
+%\usepackage{babel}
+\usepackage[utf8]{vietnam}
+%\usepackage{times}
+\usepackage{bkthesis}
+\usepackage{graphicx}
+%\usepackage{subcaption}
+
+\usepackage{mathptmx}	% same Time New Roma
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\renewcommand{\rmdefault}{phv} % Arial
+%\renewcommand{\sfdefault}{phv} % Arial
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{algorithm2e}
+\usepackage{enumitem}
+\usepackage{subfig}
+\usepackage{verbatim}
+
+% \usepackage[
+% singlelinecheck=false % <-- important
+% ]{caption}
+\usepackage[width=1\textwidth]{caption}
+
+\crname{LUẬN VĂN TỐT NGHIỆP ĐẠI HỌC}
+\ctname{ỨNG DỤNG HỌC SÂU ĐỂ ƯỚC LƯỢNG KHOẢNG CÁCH TỪ CAMERA ĐẾN VẬT THỂ TRONG ẢNH}
+\cstuname{SVTH1: Trần Nhật Quang - 1413116 \\ SVTH2: Nguyễn Tuấn Vũ - 1414757}
+
+\csCouncil{Khoa học máy tính}
+\csSupervise{TS. Nguyễn Đức Dũng}
+\csReviewer{}
+\cttime{12/2018}
+
+\thesislayout
+
+\begin{document}
+%-	Bìa cứng - màu xanh dương, chữ mạ vàng (xem mẫu đính kèm)
+%-	Trang tên (tờ lót): chất liệu giấy, nội dung giống như bìa LV
+%-	Ở gáy LV: in nhan đề LV (có thể in tóm tắt nếu nhan đề quá dài), size 15 – 17
+%-	Phiếu Nhiệm vụ LV, chấm điểm Hướng dẫn & Phản biện (đã ký): nhận từ GVHD & GVPB sau khi bảo vệ (theo lịch hẹn).
+%-	Lời cam đoan
+%-	Lời cảm ơn/ Lời ngỏ
+%-	Tóm tắt LV
+%-	Mục lục
+%-	Danh mục, bảng biểu, hình ảnh, ... (nếu có)
+%-	Nội dung LV
+%-	Danh mục TL tham khảo
+%-	Phụ lục (nếu có)
+
+\coverpage
+
+%\frontmatter
+
+% add content here
+%-	Lời cam đoan
+%\begin{declaration}
+% 
+% 	Chúng tôi xin cam đoan đây là công trình nghiên cứu của riêng chúng tôi dưới sự hướng dẫn của tiến sĩ Nguyễn Đức Dũng. Nội dung nghiên cứu và các kết quả đều là trung thực và chưa từng được công bố trước đây. Các số liệu được sử dụng cho quá trình phân tích, nhận xét được chính chúng tôi thu thập từ nhiều nguồn khác nhau và sẽ được ghi rõ trong phần tài liệu tham khảo.
+% 	
+% 	Ngoài ra, chúng tôi cũng có sử dụng một số nhận xét, đánh giá và số liệu của các tác giả khác, cơ quan tổ chức khác. Tất cả  đều có trích dẫn và chú thích nguồn gốc.
+% 	
+% 	Nếu phát hiện có bất kì sự gian lận nào, chúng tôi xin hoàn toàn chịu trách nhiệm về nội dung thực tập tốt nghiệp của mình. Trường đại học Bách Khoa thành phố Hồ Chí Minh không liên quan đến những vi phạm tác quyền, bản quyền do chúng tôi gây ra trong quá trình thực hiện.
+% 	
+%\end{declaration}
+
+%-	Lời cảm ơn/ Lời ngỏ
+%\begin{acknowledgments}
+%
+%	Để hoàn thành kì thực tập tốt nghiệp này, chúng tôi tỏ lòng biết ơn sâu sắc đến tiến sĩ Nguyễn Đức Dũng đã hướng dẫn tận tình trong suốt quá trình nghiên cứu.
+%	
+%	Chúng tôi chân thành cám ơn quý thầy, cô trong khoa Khoa Học Và Kỹ Thuật Máy Tính, trường đại học Bách Khoa thành phố Hồ Chí Minh đã tận tình truyền đạt kiến thức trong những năm chúng tôi học tập ở trường. Với vốn kiến thức tích lũy được trong suốt quá trình học tập không chỉ là nền tảng cho quá trình nghiên cứu mà còn là hành trang để bước vào đời một cách tự tin.
+%
+%	Cuối cùng, chúng tôi xin chúc quý thầy, cô dồi dào sức khỏe và thành công trong sự nghiệp cao quý.
+%	
+%\end{acknowledgments}
+	
+	
+%-	Tóm tắt LV
+%\begin{abstract}
+%	Tóm tắt luận văn ...
+%\end{abstract}	
+
+
+\tableofcontents
+%\listofsymbols
+\listoftables
+\listoffigures
+%\listofalgorithms
+
+
+\mainmatter
+
+\fancyhead{}  % Clears all page headers and footers
+%\rhead{\thepage}  % Sets the right side header to show the page number
+%\lhead{}  % Clears the left side page header
+%\fancyfoot[positions]{footer}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\pagestyle{fancy}  % Finally, use the "fancy" page style to implement the FancyHdr headers
+%\chapter*{Lời nói đầu}
+%\addcontentsline{toc}{chapter}{Lời nói đầu}
+
+\input{chapters/chapter1/chapter1_gioithieu.tex}
+
+\input{chapters/chapter2/chapter2_caccongtrinhlienquan.tex}
+
+
+\input{chapters/chapter3/chapter3_kienthucnentang.tex}
+
+
+\input{chapters/chapter4/chapter4_huongtiepcan.tex}
+
+\input{chapters/chapter5/chapter5_hienthuc.tex}
+
+\input{chapters/chapter6/chapter6_danhgia.tex}
+
+
+\newpage
+% 
+%  \begin{thebibliography}{80}
+ 
+% \bibitem{rcnn}
+% R. Girshick, J. Donahue, T. Darrell, and J. Malik, “Rich feature hierarchies for accurate object detection and semantic segmentation,” in IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2014.
+% \bibitem{fastrcnn}
+% R. Girshick, “Fast R-CNN,” in IEEE International Conference on Computer Vision (ICCV), 2015.
+% \bibitem{fasterrcnn}
+%  S. Ren, K. He, R. Girshick, and J. Sun.  Faster R-CNN: Towards  real-time  object  detection  with  region  proposal  networks. In NIPS, 2015.
+%  \bibitem{maskrcnn}
+%  K. He, G. Gkioxari, P. Dollar, and R. B. Girshick. Mask R-CNN, in ICCV, 2017.
+%  \bibitem{fcrn}
+%  I. Laina, C. Rupprecht, V. Belagiannis, F. Tombari, andN. Navab. Deeper depth prediction with Fully Convolutional Residual Networks. In 3D Vision (3DV), 2016 Fourth International Conference on, pages 239–248. IEEE, 2016.
+ 
+% \bibitem{DLbook}
+% (Adaptive Computation and Machine Learning series) Bengio, Yoshua Courville, Aaron Goodfellow, Ian J-Deep learning adaptive computation and machine learning-The MIT Press (2016).
+% \bibitem{cs231n}
+%  CS231n Convolutional Neural Networks for Visual Recognition
+% \bibitem{kinect}
+%  Leandro Cruz, Djalma Lucio, Luiz Velho. Kinect and RGBD Images: Challenges and Applications. In IEEE, 2012.
+% \bibitem{amodal3dobject}
+% Z. Deng and L. J. Latecki. Amodal detection of 3d objects: Inferring 3D bounding boxed from 2D ones in RGB-Depth images. In CVPR. 2017.
+% \bibitem{learningrichfeature}
+% S. Gupta, R. Girshick, P. Arbeláez, and J. Malik. Learning rich features from RGB-D images for object detection and segmentation. In European Conference on Computer Vision, pages 345–360. Springer, 2014.
+% \bibitem{MCG}
+% P. Arbeláez, J. Pont-Tuset, J. T. Barron, F. Marques, and J. Malik. Multiscale combinatorial grouping. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pages 328–335, 2014.
+% \bibitem{toward}
+% W. Liu, R. Ji, and S. Li. Towards 3d object detection with bimodal deep boltzmann machines over rgbd imagery. In CVPR. 2015.
+% \bibitem{guppta}
+% S. Gupta, P. Arbelaez, R. Girshick, and J. Malik. Aligning 3d models to rgb-d images of cluttered scenes. In CVPR. 2015.
+% \bibitem{Kim}
+% B. soo Kim, S. Xu, and S. Savarese. Accurate localization of 3d object from rgb-d data using segmentation hypothesis. In ICCV. 2013.
+% \bibitem{ss}
+% S. Song and J. Xiao. Sliding shapes for 3d object detection in depth images. In ECCV. 2014.
+% \bibitem{three}
+% Z. Ren and E. B. Sudderth. Three-dimensional object detection and layout prediction using clouds of oriented gradients.
+% In CVPR. 2016.
+% \bibitem{dss}
+% S. Song and J. Xiao. Deep sliding shapes for amodal 3d object detection in rgb-d images. In CVPR. 2016.
+% \bibitem{VGG}
+% K. Simonyan and A. Zisserman. Very deep convolutional
+% networks for large-scale image recognition. arXiv, 2014.
+%  \end{thebibliography}
+
+\bibliography{refs} 
+\bibliographystyle{ieeetr}
+
+
+%\bibliography{refs}{}
+%\bibliographystyle{plain}
+%-	Danh mục TL tham khảo
+%-	Phụ lục (nếu có)
+
+\end{document}

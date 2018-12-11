@@ -1,0 +1,23 @@
+\documentclass{book}
+\usepackage{titlesec}
+\usepackage{titletoc}
+
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{}{0pt}{\Huge}
+\renewcommand\thesection{\arabic{section}}
+
+\titlecontents{chapter}
+  [0em]{\addvspace{10pt}\bfseries}
+  {}{}{\titlerule*[1000pc]{.}\contentspage}
+
+\begin{document}
+
+\tableofcontents
+\chapter{First Chapter}
+\section{Test Section One}
+\section{Test Section Two}
+\chapter{Second Chapter}
+\section{Test Section One}
+\section{Test Section Two}
+
+\end{document}
