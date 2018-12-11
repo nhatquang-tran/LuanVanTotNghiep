@@ -281,10 +281,20 @@ Theo kết quả từ bảng \ref{tab:compare_gtpred}, có thể thấy sự ch�
    \label{fig:distribution}
    \end{figure}
  \end{center} 
- \hspace{.2cm}\textbf{2. Tiến hành đánh giá sự ảnh hưởng của hình dạng vật thể với kết quả dự đoán ảnh độ sâu}: những vật thể mà nhóm chọn để đánh giá bao gồm: chai nước, giường ngủ và toi-let. Mỗi vật thể trên đều có hình dáng rất khác nhau.\\
+ \hspace{.2cm}\textbf{2. Tiến hành đánh giá sự ảnh hưởng của hình dạng vật thể với kết quả dự đoán ảnh độ sâu}: những vật thể mà nhóm chọn để đánh giá bao gồm: chai nước, giường ngủ và toi-let. Mỗi vật thể trên đều có hình dáng rất khác nhau. Số lượng vật thể mà Mask RCNN phát hiện trên được vào khoảng 970 vật thể, trong đó có khoảng 635 chai nước, 260 giường ngủ và khoảng 75 toi-let. \\
  
-Nhóm đã chọn kết quả phân đoạn từ Mask RCNN làm kết quả bề mặt của vật thể  và tiến hành phân tích bằng cách chọn giá trị độ sâu lớn nhất và nhỏ nhất của những bề mặt vật thể này trên ảnh độ sâu thực tế. Sau đó tiến hành so sánh giữa độ chênh lệch của giá trị lớn nhất, giá trị nhỏ nhất này giữa từng loại vật thể. 
-
+Nhóm đã chọn kết quả phân đoạn từ Mask RCNN làm kết quả bề mặt của vật thể  và tiến hành phân tích bằng cách chọn giá trị độ sâu lớn nhất và nhỏ nhất của những bề mặt vật thể này trên ảnh độ sâu thực tế. Sau đó tiến hành so sánh giữa độ chênh lệch của giá trị lớn nhất, giá trị nhỏ nhất này trên từng loại vật thể.
+\begin{center}
+   \begin{figure}[H]
+   \begin{center}
+   \includegraphics[scale=0.55]{image/gtminmax}
+   \end{center}
+   \caption{Sự chênh lệch giá trị lớn nhất, nhỏ nhất của vật thể trên ảnh độ sâu thực tế}
+   \label{fig:gtminmax}
+   \end{figure}
+ \end{center} 
+ 
+ Từ hình \ref{fig:gtminmax}, với vật thể là chai nước thì có khoảng hơn 500 giá trị chênh lệch giữa giá trị lớn nhất và nhỏ nhất là nhỏ hơn 0.5m. Mặt khác, với những vật thể có kích thước lớn cả về chiều rộng và chiều dài, thì độ chênh lệch sẽ được thể hiện càng lớn. Ở kết quả thống kê của nhóm với đối tượng là cái giường ngủ, thì có khoảng 170 giá trị chênh lệch nằm trong khoảng từ 1.75m đến 2.5m. Với đối tượng cuối cùng là toi-let với hình dạng phức tạp hơn, thì đa số sự chênh lệch này tập trung vào khoảng từ 0.5m đến 1m. Từ những kết quả nhận được trong hình \ref{fig:gtminmax}, ta có thể thấy rằng những tính chất về hình dạng của vật thể  được thể hiện khá rõ trên ảnh độ sâu. 
 
  
  
